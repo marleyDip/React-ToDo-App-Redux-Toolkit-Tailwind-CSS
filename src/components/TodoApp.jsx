@@ -1,6 +1,7 @@
 import { CheckCircle2, Circle, Filter, Plus, Trash2 } from "lucide-react";
 import TodoFilters from "./TodoFilters";
 import TodoForm from "./TodoForm";
+import TodoItem from "./TodoItem";
 
 function TodoApp() {
   return (
@@ -123,6 +124,7 @@ function TodoApp() {
 
                 <p className="text-lg font-medium mb-2 text-gray-800">
                   No Filter Todos
+                  <TodoItem />
                 </p>
               </div>
               {/* conditional rendering */}

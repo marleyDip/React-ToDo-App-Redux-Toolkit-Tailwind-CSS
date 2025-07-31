@@ -1,9 +1,14 @@
 import { CheckCircle2, Circle, Filter, Plus, Trash2 } from "lucide-react";
+import { useSelector } from "react-redux";
 import TodoFilters from "./TodoFilters";
 import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 
 function TodoApp() {
+  const todos = useSelector(selectTodos)
+
+
+
   return (
     <div
       className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300
@@ -114,7 +119,6 @@ function TodoApp() {
                 <p className="text-lg font-medium mb-2 text-gray-800">
                   No Todos Yet
                 </p>
-
                 <p>Add your first todo to get started!</p>
               </div>
 
@@ -124,7 +128,6 @@ function TodoApp() {
 
                 <p className="text-lg font-medium mb-2 text-gray-800">
                   No Filter Todos
-                  <TodoItem />
                 </p>
               </div>
               {/* conditional rendering */}

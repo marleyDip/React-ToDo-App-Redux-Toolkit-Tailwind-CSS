@@ -68,6 +68,7 @@ const todoSlice = createSlice({
       if (todo) {
         Object.assign(todo, updates, { updatedAt: new Date().toISOString() });
       }
+      saveTodos(state.items);
     },
 
     setFilter: (state, action) => {
@@ -80,8 +81,8 @@ const todoSlice = createSlice({
       state.items.forEach((todo) => {
         todo.completed = hasInComplete;
         todo.updatedAt = new Date().toISOString();
-        saveTodos(state.items);
       });
+      saveTodos(state.items);
     },
 
     clearAllComplete: (state) => {

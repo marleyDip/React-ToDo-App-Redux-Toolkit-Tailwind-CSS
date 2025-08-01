@@ -51,7 +51,7 @@ function TodoApp() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300
+      className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-blue-200
      py-8 px-4"
     >
       <div className="max-w-2xl mx-auto">
@@ -219,7 +219,17 @@ function TodoApp() {
         {/* main todo container */}
 
         {/* footer */}
-        <div className="text-center mt-6 text-sm text-gray-700">footer</div>
+        <div className="text-center mt-6 text-lg font-semibold text-gray-700">
+          &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://marleydip.netlify.app/"
+            target="_blank"
+            className="text-emerald-500 hover:text-sky-500"
+          >
+            Z-Index Software Limited
+          </a>
+          . All Right Reserved
+        </div>
         {/* footer */}
       </div>
     </div>
